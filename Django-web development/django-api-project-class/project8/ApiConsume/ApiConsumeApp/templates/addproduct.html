@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="product_name" class="form-label">Enter Product Name</label>
+            <input type="text" name="product_name" id="product_name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Enter Price</label>
+            <input type="number" name="price" id="price" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Enter Quantity</label>
+            <input type="number" name="quantity" id="quantity" class="form-control" required>
+        </div>
+      
+        <input type="submit" value="Add Product" class="btn btn-success">
+    </form>
+</body>
+</html>
